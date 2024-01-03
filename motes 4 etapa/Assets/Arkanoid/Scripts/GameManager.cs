@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -12,29 +14,29 @@ public class GameManager : MonoBehaviour
     
     public GameObject playerPrefab;
     public GameObject ballPrefab;
-
-    public Transform SpawnPointPlayerB;
-    public Transform SpawnPointBallB;
+    public Transform playerSpawnPoint;
+    public Transform ballSpawnPoint;
 
     public PlayerB playerAtual;
     public BallB ballAtual;
 
-    void Awake()
-    {
-        instance = this;
-    }
+    public TextMeshProUGUI contador;
+    public TextMeshProUGUI msgFinal;
+
+    public bool segurando;
+    private Vector3 offset;
+     private void Awake()
+     {
+         throw new NotImplementedException();
+     }
 // Start is called before the first frame update
     void Start()
     {
-        SpawnarNovoJogador();
+        
     }
 
-    public void SpawnarNovoJogador()
+    
     {
-        GameObject playerObj = 
-            Instantiate(playerPrefab, SpawnPointPlayerB.position, Quaternion.identity);
-        GameObject ballObj = 
-            Instantiate(ballPrefab, SpawnPointBallB.position, Quaternion.identity);
     }
 
     // Start is called before the first frame update
